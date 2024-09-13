@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw2_form_js</title>
+    <style>
+        .top{
+            margin: 75px 50px 10px 50px;
+            display: grid; place-items: center;
+        }
+        input{
+            margin : 5px 0px 5px 0px;
+        }
+        input[type=email]{
+            background-size: 10%;
+            background-image: url('https://cdn.pixabay.com/photo/2012/04/14/12/44/at-sign-33776_640.png');
+            background-position: 20px px; 
+            background-repeat: no-repeat;
+            
+        }
+        input[type=checkbox]{
+            margin-right: 5px;
+        }
+        input[type=radio]{
+            margin-right: 10px;
+        }
+        input[type=submit]{
+            background-color:rgb(7, 102, 255);
+            width: 300px;
+            height: 30px;
+            color: #ffffff;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+
+        }
+        
+        select{
+            width: 135px;
+            padding: 2px;
+            
+
+        }
+        label{
+            margin-right: 90px;
+            padding-bottom: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="top", id="top">
+        <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" text-align: center>
+        <h2>Checkout form</h2>
+        <p>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p> 
+    </div>
+    <form>
+        <label for="f_name">First name</label>
+        <label for="l_name">Last name</label><br>
+
+        <input type="text" id="f_name" name="f_name" required> 
+        <input type="text" id="l_name" name="l_name" required>
+        <br>
+        <label for="username">Username</label><br>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <br>
+        <label for="email">Email(Optional)</label>
+        <br>
+        <input type="email" id="email" name="email" onclick="disappear()" placeholder="you@example.com">
+        <br>
+        <label for="address">Address</label><br>
+        <input type="text" id="address" name="address" placeholder="1234 Main St" required><br>
+        <label for="address2">Address 2 (Optional)</label><br>
+        <input type="text" id="address2" name="address2" placeholder="Apartment or suite"><br>
+        <label for="country">Country</label>
+        <label for="state">State</label>
+        <label for="zip">Zip</label><br>
+        <select id="country">
+            <option value="Choose">Choose..</option>
+            <option value="US">United States</option>
+            <option value="KR">Korea</option>
+            <option value="UK">United Kingdom</option>
+        </select>
+        <select id="state">
+            <option value="Choose">Choose..</option>
+            <option value="ca">California</option>
+            <option value="il">illinois</option>
+        </select>
+        <!--<input type="text" id="zip" name="zip" required>-->
+        <textarea id="zip" name="zip" rows="1px" cols="5px" required></textarea>
+        <br>-------------------------------------------------------<br>
+
+
+        <input type="checkbox" id="check1" class="input_basic" />  
+        <label for="check1">Shipping address is the same as my billing address</label><br>
+        <input type="checkbox" id="check2" class="input_basic" />  
+        <label for="check2">Save this information for next time</label>
+
+        <br>-------------------------------------------------------<br>
+        <h2> Payment</h2>
+
+        <label for="input_radio">
+            <input type="radio" id="radio_1" name="same" >Credit card
+            <br><input type="radio" id="radio_2" name="same" value="Debit card">Debit card
+            <br><input type="radio" id="radio_3" name="same" value="PayPal">PayPal
+        </label><br><br>
+        <label style="margin-right: 60px" for="name_card">Name on card</label>
+        <label for="credit_number">Credit card number</label><br>
+        <input type="text" id="name_card" name="name_card">
+        <input type="text" id="credit_number" name="credit_number">
+        <br> <p style="font-size:0.8rem color=#767676f0">Full name as displayed on card</p>
+        <br> <label for="expiration">Expiration</label>
+        <label for="cvv">CVV</label><br>
+        <input type="date" id="expiration" name="expiration">
+        <input type="text" id="cvv" name="cvv">
+ 
+        <br>-------------------------------------------------------<br>
+        <input type="submit" value="Continue to checkout" onclick="check();" >
+   
+    </form>
+<script>    
+    function disappear(){
+        
+        let div=document.getElementById("email");
+        div.style="background : none"; 
+        
+        
+    }
+    function check(){
+        let f_name = document.getElementById("f_name").value;
+        let l_name = document.getElementById("l_name").value;
+        let username = document.getElementById("username").value;
+        let email = document.getElementById("email").value;
+        let address = document.getElementById("address").value;
+        let address2_opt = document.getElementById("address2").value;
+        let country = document.getElementById("country").value;
+        let state = document.getElementById("state").value;
+        let zip = document.getElementById("zip").value;
+        let name_card = document.getElementById("name_card").value;
+        let credit_number = document.getElementById("credit_number").value;
+        let expiration = document.getElementById("expiration").value;
+        let cvv = document.getElementById("cvv").value;
+        console.log("f_name : "+f_name);
+        console.log("l_name : "+l_name);
+        console.log("username : "+username);
+        console.log("email : "+email);
+        console.log("address : "+address);
+        console.log("address2_opt : "+address2_opt);
+        console.log("country : "+country);
+        console.log("state : "+state);
+        console.log("zip : "+zip);
+        console.log("name_card : "+name_card);
+        console.log("credit_number : "+credit_number);
+        console.log("expiration : "+expiration);
+        console.log("cvv : "+cvv);
+        
+        let check=0;
+        if (f_name === '') {
+            check+=1;
+            alert('Enter your First name');
+        }
+        if (l_name === '') {
+            check+=1;
+            alert('Enter your Last name');
+        }
+        if (username === '') {
+            check+=1;
+            alert('Enter your Username');
+        }
+        if (address === '') {
+            check+=1;
+            alert('Enter your Address');
+        }
+        if (country === 'Choose') {
+            check+=1;
+            alert('Enter your Country');
+        }
+        if (state === 'Choose') {
+            check+=1;
+            alert('Enter your State');
+        }
+        if (zip === '') {
+            check+=1;
+            alert('Enter your Zip');
+        }
+        if (name_card === '') {
+            check+=1;
+            alert('Enter your Name on card');
+        }
+        if (credit_number === '') {
+            check+=1;
+            alert('Enter your credit_number');
+        }
+        if (expiration === '') {
+            check+=1;
+            alert('Enter your expiration');
+        }
+        if (cvv === '') {
+            check+=1;
+            alert('Enter your cvv');
+        }
+
+        if (check==0){
+            let checkout = confirm("정말 등록하시겠습니까?")
+            if (checkout){
+                alert("잘 등록되었습니다!")
+            }
+            else {
+                alert("등록 안하겠습니다!")
+            }
+            
+        }
+
+    }
+</script>
+</body>
+</html>

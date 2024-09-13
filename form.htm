@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>hw2_list</title>
+    <style>
+        #title{
+            color : green;
+            font-weight: 900;
+
+        }
+        h3{
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        #input_append{
+            background-color: aqua;
+            border-color : #000000;
+            width : 160px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">동적 페이지 예시</h1>
+    <h3>데이터를 입력하십시오. <br>"추가" 버튼을 누르면 아래 목록에 추가됩다. <br>추가된 특정 데이터를 클릭하면 특정 데이터만 삭제됩니다. <br>"전체 삭제"을 누르면 전체 목록이 삭제됩니다.</h3>
+    <input type="text" id="input_append" placeholder="추가할 데이터를 입력하시오."/>
+    <button onclick="listner_append()">추가</button>
+    <button onclick="delete_all()">전체 삭제</button>
+    <br><h3>목록</h3>
+    <ul id="div_append"></ul>
+    <script>
+        function listner_append(){
+            let div_append = document.getElementById("div_append");
+            let input_append = document.getElementById("input_append").value;
+            if(input_append==""){
+                return false;
+            }
+            div_append.innerHTML +="<li onclick='listner_remove(this)'>"+input_append+"</li>";
+            //div_append.append("<div onclick='listner_remove(this)'>"+input_append+"</div>");
+            document.getElementById("input_append").value='';
+        }
+        function listner_remove(obj){
+            obj.remove();
+        }
+        function delete_all(){
+            let div_append = document.getElementById("div_append");
+            
+            div_append.innerHTML='';
+            document.getElementById("input_append").value='';
+        }
+    </script>
+</body>
+</html>

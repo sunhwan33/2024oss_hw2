@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw2_form_nostyle</title>
+    
+</head>
+<body>
+    <div class="top", id="top">
+        <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" text-align: center>
+        <h2>Checkout form</h2>
+        <p>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p> 
+    </div>
+    <form>
+        <label for="f_name">First name</label>
+        <label for="l_name">Last name</label><br>
+
+        <input type="text" id="f_name" name="f_name" > 
+        <input type="text" id="l_name" name="l_name" >
+        <br>
+        <label for="username">Username</label><br>
+        <input type="text" id="username" name="username" placeholder="Username" >
+        <br>
+        <label for="email">Email(Optional)</label>
+        <br>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+        <br>
+        <label for="address">Address</label><br>
+        <input type="text" id="address" name="address" placeholder="1234 Main St" ><br>
+        <label for="address2">Address (Optional)</label><br>
+        <input type="text" id="address2" name="address2" placeholder="Apartment or suite"><br>
+        <label for="country">Country</label>
+        <label for="state">State</label>
+        <label for="zip">Zip</label><br>
+        <select id="country">
+            <option value="Choose">Choose..</option>
+            <option value="US">United States</option>
+            <option value="KR">Korea</option>
+            <option value="UK">United Kingdom</option>
+        </select>
+        <select id="state">
+            <option value="Choose">Choose..</option>
+            <option value="ca">California</option>
+            <option value="il">illinois</option>
+        </select>
+        <!--<input type="text" id="zip" name="zip" >-->
+        <textarea  ></textarea>
+        <br>-------------------------------------------------------<br>
+
+
+        <input type="checkbox" id="check1" class="input_basic" />  
+        <label for="check1">Shipping address is the same as my billing address</label><br>
+        <input type="checkbox" id="check2" class="input_basic" />  
+        <label for="check2">Save this information for next time</label>
+
+        <br>-------------------------------------------------------<br>
+    <h2> Payment</h2>
+
+        <label for="input_radio">
+            <input type="radio" id="radio_1" name="same">Credit card
+            <br><input type="radio" id="radio_2" name="same">Debit card
+            <br><input type="radio" id="radio_3" name="same">PayPal
+        </label><br><br>
+        <label  for="name_card">Name on card</label>
+        <label for="credit_number">Credit card number</label><br>
+        <input type="text" id="name_card" name="name_card">
+        <input type="text" id="credit_number" name="credit_number">
+        <br> <p>Full name as displayed on card</p>
+
+        <br> <label for="expiration">Expiration</label>
+        <label for="cvv">CVV</label><br>
+        <input type="date" id="expiration" name="expiration">
+        <input type="text" id="cvv" name="cvv">
+ 
+        <br>-------------------------------------------------------<br>
+    <input id="btn" type="submit" value="Continue to checkout"  >
+   
+</form>
+</body>
+</html>
