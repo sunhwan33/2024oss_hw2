@@ -1,0 +1,75 @@
+/* General styles for all screens */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* Tablet and smaller devices (portrait mode) */
+@media only screen and (max-width: 768px) {
+    
+
+
+    table {
+        font-size: 10px;
+    }
+
+    .col-7 {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        float : right;
+        margin-bottom: 10px;
+    }
+
+    
+}
+
+/* Smartphone view */
+@media only screen and (max-width: 480px) {
+    body{
+        margin-left : 5px;
+        margin-right : 5px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 8px;
+    }
+
+    button {
+        float:right;
+        font-size: 12px;
+    }
+
+   
+}
+
+/* Larger screens like desktops */
+@media only screen and (min-width: 769px) {
+   
+
+    table {
+        font-size: 14px;
+    }
+
+    button {
+        float : right;
+        font-size: 16px;
+    }
+
+    .col-7 {
+        width: 50%;
+    }
+}
