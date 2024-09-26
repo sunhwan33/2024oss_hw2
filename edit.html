@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="./my.css" rel="stylesheet" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    
+      <div class="container">
+        <form >
+        <div class="row">
+            <div class="col-7 mb-3">
+                <label for="InputStudentNumber" class="form-label">Student number</label>
+                <input type="text" class="form-control" id="InputStudentNumber" required value="202401">
+            </div>
+            <div class="col-7 mb-3">
+                <label for="InputName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="InputName" required value="이선환">
+            </div>
+            <div class="col-7 mb-3"> <!-- mb-3은 margin-bottom: 16px-->
+                <label for="InputFirstMajor" class="form-label">1st major</label>
+                <input type="text" class="form-control" id="InputFirstMajor" required value="컴퓨터공학">
+            </div>
+            <div class="col-7 mb-3"> <!-- mb-3은 margin-bottom: 16px-->
+                <label for="InputSecondMajor" class="form-label">2nd major</label>
+                <input type="text" class="form-control" id="InputSecondMajor" value="경영학">
+            </div>
+            <div class="col-7 mb-3"> <!-- mb-3은 margin-bottom: 16px-->
+                <label for="InputEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" required  value="sunhwan@handong.ac.kr">
+            </div>
+            <div class="col-7 mb-3"> <!-- mb-3은 margin-bottom: 16px-->
+                <label for="InputBirthdate" class="form-label">Birthdate</label>
+                <input type="date" class="form-control" id="InputBirthdate" required value="2000-11-23">
+            </div>
+            <div class="col-7 mb-3"> <!-- mb-3은 margin-bottom: 16px-->
+                <label for="InputRC" class="form-label">RC</label>
+                <input type="text" class="form-control" id="InputRC" required  value="토레이">
+            </div>
+        </div>
+        <button class="btn btn-warning" type="button" onclick="location.href='./index.html'" style="float:right">취소</button>
+        <button class="btn btn-warning" type="submit" onclick="edit_confirm()" style="float:right">확인</button>
+        
+        </form>
+      </div>
+      
+      
+      <!-- 제이쿼리
+       -->
+       <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+      <script>
+        //let exampleInputEmail_03= $("#exampleInputEmail_03")
+        //alert(exampleInputEmail_03);
+        
+        // 이메일 형식 검사용 정규식
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+        function edit_confirm(){
+            if(confirm("게시물을 수정할까요?")==true){
+                checkContent();
+            
+            }
+           
+        }
+        
+        function checkContent(){
+            
+            let studentnumber = document.getElementById("InputStudentNumber").value;
+            //alert(studentnumber);
+            
+            let name = document.getElementById("InputName").value;
+            let first_major = document.getElementById("InputFirstMajor").value;
+            let second_major = document.getElementById("InputSecondMajor").value;
+            let email = document.getElementById("InputEmail").value;
+            let birthdate = document.getElementById("InputBirthdate").value;
+            let rc = document.getElementById("InputRC").value;
+            console.log("studentnumber : "+studentnumber);
+            console.log("name : "+name);
+            console.log("first_major : "+first_major);
+            console.log("second_major : "+second_major);
+            console.log("email : "+email);
+            console.log("birthdate : "+birthdate);
+            console.log("rc : "+rc);
+            
+            
+        
+            if (studentnumber == '') {
+                
+                alert('Enter your studentnumber');
+            }
+            if (name == '') {
+                
+                alert('Enter your name');
+            }
+            if (first_major == '') {
+            
+                alert('Enter your first_major');
+            }
+            if (email == '') {
+            
+                alert('Enter your email');
+            }
+            if (birthdate == '') {
+            
+                alert('Enter your birthdate');
+            }
+            if (rc == '') {
+            
+                alert('Enter your RC');
+            }
+            if (validateEmail(email) && studentnumber != '' && name != '' && first_major != '' && email != '' && birthdate != ''&& rc != ''){
+                alert('게시물을 수정했습니다.');
+            }
+            
+        }
+        /*function go_index(){
+            window.location.href="./index.html";
+        }*/
+
+      </script>  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+
+</body>
+</html>
