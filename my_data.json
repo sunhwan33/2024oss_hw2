@@ -11,94 +11,94 @@
       "RC": "토레이"
     },
     {
+      "id": "24e9",
       "student_number": "202402",
       "name": "박보검",
       "1_major": "기계공학",
       "2_major": "건설공학",
       "email": "qhrja@handong.ac.kr",
       "birthdate": "1999.10.02",
-      "RC": "열송학사",
-      "id": "24e9"
+      "RC": "열송학사"
     },
     {
+      "id": "a704",
       "student_number": "202403",
       "name": "정해인",
       "1_major": "공연영상학",
       "2_major": "미디어커뮤니케이션학",
       "email": "godls@handong.ac.kr",
       "birthdate": "2000.02.23",
-      "RC": "카이퍼",
-      "id": "a704"
+      "RC": "카이퍼"
     },
     {
+      "id": "8fa0",
       "student_number": "202404",
       "name": "강슬기",
       "1_major": "한국법",
       "2_major": "경제학",
       "email": "wldnjs@handong.ac.kr",
       "birthdate": "2002.03.20",
-      "RC": "토레이",
-      "id": "8fa0"
+      "RC": "토레이"
     },
     {
+      "id": "fa66",
       "student_number": "202405",
       "name": "김태래",
       "1_major": "경영학",
       "2_major": "사회복지학",
       "email": "xofo@handong.ac.kr",
       "birthdate": "2002.04.12",
-      "RC": "토레이",
-      "id": "fa66"
+      "RC": "토레이"
     },
     {
+      "id": "56b8",
       "student_number": "202406",
       "name": "고윤정",
       "1_major": "국제지역학",
       "2_major": "시각디자인",
       "email": "dbswjd@handong.ac.kr",
       "birthdate": "2002.06.13",
-      "RC": "토레이",
-      "id": "56b8"
+      "RC": "토레이"
     },
     {
+      "id": "f141",
       "student_number": "202407",
       "name": "김도영",
       "1_major": "한국법",
       "2_major": "미국법",
       "email": "ehdud@handong.ac.kr",
       "birthdate": "2002.06.21",
-      "RC": "카마이클",
-      "id": "f141"
+      "RC": "카마이클"
     },
     {
+      "id": "eb35",
       "student_number": "202408",
       "name": "강백호",
       "1_major": "영어학",
       "2_major": "상담심리학",
       "email": "qorgh@handong.ac.kr",
       "birthdate": "2002.01.21",
-      "RC": "손양원",
-      "id": "eb35"
+      "RC": "손양원"
     },
     {
+      "id": "79da",
       "student_number": "202409",
       "name": "이지은",
       "1_major": "경제학",
       "2_major": "글로벌한국학",
       "email": "gkfla@handong.ac.kr",
       "birthdate": "2002.04.04",
-      "RC": "토레이",
-      "id": "79da"
+      "RC": "토레이"
     },
     {
+      "id": "a3d5",
       "student_number": "202410",
       "name": "배수지",
       "1_major": "컴퓨터공학",
       "2_major": "전자공학",
       "email": "tnwl@handong.ac.kr",
       "birthdate": "1997.10.19",
-      "RC": "토레이",
-      "id": "a3d5"
+      "RC": "토레이"
     }
   ]
 }
